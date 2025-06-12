@@ -2,3 +2,5 @@ build
 .vscode
 valgrind-out.txt
 test.sh.log
+.python-version
+actions-runner/
