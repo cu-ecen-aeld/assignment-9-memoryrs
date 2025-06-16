@@ -1,0 +1,36 @@
+#! /bin/sh
+
+start() {
+    echo "Loading scull module..."
+    modprobe scull
+    echo "OK"
+}
+
+stop() {
+    echo "Unloading scull module..."
+    rmmod scull || exit 1
+    echo "OK"
+}
+
+restart() {
+    echo "Reloading scull module"
+    stop
+    start
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart | reload)
+        restart
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|reload}"
+    exit 1
+esac
+
+exit $?
