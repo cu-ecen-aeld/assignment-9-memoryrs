@@ -6,7 +6,7 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-memoryrs.gi
            file://aesdchar-init"
 
 PV = "1.0+git${SRCPV}"
-SRCREV = "91255843df4066472228e847a8c8f95b327df9d9"
+SRCREV = "406a4bffd3648425ed5f7f8e8aa23d2fd76cb8ca"
 
 S = "${WORKDIR}/git/aesd-char-driver"
 
